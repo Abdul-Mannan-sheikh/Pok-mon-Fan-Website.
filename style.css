@@ -1,0 +1,1393 @@
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.head-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  border-top: 2px solid #d8d8d8;
+  border-bottom: 2px solid #d8d8d8;
+  padding: 0 10px;
+}
+
+.container {
+  width: 100%;
+  max-width: 930px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+
+.nav-btn {
+  width: 150px;
+  height: 72px;
+  border: none;
+  border-left: 1px solid #cfcfcf;
+  background-color: #f4f4f4;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-btn:last-child {
+  border-right: 1px solid #cfcfcf;
+}
+
+.nav-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.nav-btn:hover {
+  background-color: #e5e5e5;
+}
+
+.active {
+  background-color: #f7d900;
+}
+
+/* FIX: keep header single-row on all screen sizes — scroll horizontally instead of wrapping */
+@media(max-width: 768px) {
+
+  .head-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0;
+  }
+
+  .container {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 0;
+    width: max-content;
+    min-width: 100%;
+  }
+
+  .nav-btn {
+    width: 150px;
+    height: 72px;
+    flex-shrink: 0;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+.our-container .box {
+  padding: 20px;
+}
+
+.our-container .box>span {
+  color: inherit;
+
+}
+
+.one {
+  border-bottom: 3px solid gray;
+  background-color: gray;
+  color: white;
+  pointer-events: none;
+}
+
+.one .text,
+.one span {
+  color: white !important;
+}
+
+.one:hover {
+  background-color: grey;
+  color: gray;
+}
+
+.two {
+  border-bottom: 3px solid rgb(227 53 13);
+}
+
+.two:hover {
+  background-color: rgb(227 53 13);
+  color: white;
+}
+
+.three {
+  border-bottom: 3px solid rgb(238 107 47);
+}
+
+.three:hover {
+  background-color: rgb(238 107 47);
+  color: white;
+}
+
+.four {
+
+  border-bottom: 3px solid rgb(230 188 47);
+}
+
+.four:hover {
+  background-color: rgb(230 188 47);
+  color: white;
+}
+
+.five {
+
+  border-bottom: 3px solid rgb(77 173 91);
+}
+
+.five:hover {
+  background-color: rgb(77 173 91);
+  color: white;
+}
+
+.six {
+
+  border-bottom: 3px solid rgb(48 167 215);
+}
+
+.six:hover {
+  background-color: rgb(48 167 215);
+  color: white;
+}
+
+.seven {
+  border-bottom: 3px solid rgb(27 83 186);
+}
+
+.seven:hover {
+  background-color: rgb(27 83 186);
+  color: white;
+}
+
+.text {
+  font-family: "Roboto", arial, sans-serif;
+  font-weight: 500;
+  color: #464646;
+  font-size: 12px !important;
+}
+
+.box {
+  text-align: center;
+  display: inline-block;
+  color: gray;
+  margin-left: -4px;
+
+}
+
+.header {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* FIX: our-container overflows on small screens — scoped to tablet/mobile only, desktop untouched */
+@media(max-width: 768px) {
+  .our-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.backgroung-img {
+  background-image: url(./image/back.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding: 40px 15px;
+}
+
+.poke-section {
+  width: 100%;
+  padding: 30px 140px;
+}
+
+.poke-grid {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.hero-card {
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.hero-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-content {
+  background: #1f57b7;
+  color: #fff;
+  padding: 22px;
+}
+
+.hero-content h2 {
+  font-size: clamp(18px, 2.4vw, 30px);
+  line-height: 1.20;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.hero-content h2 span {
+  font-style: italic;
+}
+
+.hero-content p {
+  font-size: clamp(13px, 1.2vw, 15px);
+  line-height: 1.4;
+  color: #bfe0ff;
+}
+
+.side-cards {
+  display: grid;
+  gap: 18px;
+}
+
+.small-card {
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.small-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+  background: #eaeaea;
+}
+
+.small-content {
+  padding: 18px 20px;
+  min-height: 110px;
+  display: flex;
+  align-items: center;
+}
+
+.small-content h3 {
+  font-size: clamp(18px, 1.6vw, 24px);
+  line-height: 1.35;
+  color: #fff;
+  font-weight: 600;
+}
+
+.blue-card .small-content {
+  background: #39a8d6;
+}
+
+.green-card .small-content {
+  background: #52b35c;
+}
+
+.hero-card,
+.small-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero-card:hover,
+.small-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+}
+
+/* Responsive — poke-grid */
+@media (max-width: 992px) {
+  .poke-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card img {
+    height: 320px;
+  }
+
+  .side-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .poke-section {
+    padding: 16px 0;
+  }
+
+  .poke-grid {
+    width: 94%;
+    gap: 14px;
+  }
+
+  .side-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card img {
+    height: 240px;
+  }
+
+  .small-card img {
+    height: 150px;
+  }
+
+  .hero-content,
+  .small-content {
+    padding: 16px;
+  }
+}
+
+/* FIX: poke-section had 140px side padding which crushed cards on tablet */
+@media (max-width: 992px) {
+  .poke-section {
+    padding: 30px 20px;
+  }
+}
+
+/* ── new-articale section ── */
+.new-articale {
+  padding-right: 320px;
+  margin-top: -50px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.new-in {
+  width: 300px;
+}
+
+.new-in img {
+  width: 100%;
+  height: 200px;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.high-content {
+  padding: 10px 10px;
+  min-height: 110px;
+  display: flex;
+  align-items: center;
+  margin-top: -4px;
+}
+
+.high-content h3 {
+  font-size: clamp(18px, 1.6vw, 24px);
+  line-height: 1.35;
+  color: #fff;
+  font-weight: 600;
+}
+
+.purple-card .high-content {
+  background-color: rgb(179 138 234);
+  border-radius: 0 0 8px 8px;
+}
+
+.oring-card .high-content {
+  background-color: rgb(238 107 47);
+  border-radius: 0 0 8px 8px;
+}
+
+/* ── fine-in / inner-div — original desktop values preserved exactly ── */
+.fine-in {
+  width: 300px;
+}
+
+.inner-div {
+  padding-left: 950px;
+  margin-top: -260px;
+}
+
+.fine-in img {
+  width: 100%;
+  height: 150px;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.low-content {
+  padding: 10px 10px;
+  min-height: 110px;
+  display: flex;
+  align-items: center;
+  margin-top: -4px;
+}
+
+.low-content h3 {
+  font-size: clamp(18px, 1.6vw, 24px);
+  line-height: 1.35;
+  color: #fff;
+  font-weight: 600;
+}
+
+.grey-card .low-content {
+  background-color: rgb(103 89 69);
+  border-radius: 0 0 8px 8px;
+}
+
+/* TABLET — remove the large right padding and reset negative margin */
+@media(max-width: 992px) {
+  .new-articale {
+    padding-right: 0;
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  /* FIX: pull inner-div back into flow on tablet */
+  .inner-div {
+    padding-left: 0;
+    margin-top: 0;
+  }
+}
+
+/* MOBILE */
+@media(max-width: 700px) {
+  .new-articale {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    margin-top: 20px;
+  }
+
+  .new-in {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .new-in img {
+    height: auto;
+  }
+
+  .high-content {
+    min-height: auto;
+    padding: 16px;
+  }
+
+  .high-content h3 {
+    font-size: 18px;
+  }
+
+  /* FIX: fine-in also needs full width on mobile */
+  .inner-div {
+    padding-left: 0;
+    margin-top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .fine-in {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .fine-in img {
+    height: auto;
+  }
+
+  .low-content {
+    min-height: auto;
+    padding: 16px;
+  }
+
+  .low-content h3 {
+    font-size: 18px;
+  }
+}
+
+/* ── poke-showcase (Featured Pokémon) ── */
+body {
+  background: #fff;
+}
+
+.poke-showcase {
+  position: relative;
+  width: 100%;
+  min-height: 650px;
+  padding: 60px 0 40px;
+  overflow: hidden;
+  background:
+    repeating-linear-gradient(135deg,
+      #f5f5f5 0px,
+      #f5f5f5 20px,
+      #ffffff 20px,
+      #ffffff 60px);
+}
+
+/* LEFT SIDEBAR */
+.poke-sidebar {
+  position: absolute;
+  left: 0;
+  top: 120px;
+  width: 72px;
+  z-index: 10;
+}
+
+.poke-login-panel {
+  width: 72px;
+  height: 103px;
+  background: #5fc165;
+  color: #fff;
+  border: 2px solid #222;
+  border-left: none;
+  border-radius: 0 12px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.poke-user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.poke-search-panel {
+  width: 72px;
+  height: 64px;
+  background: #3d3d3d;
+  color: #fff;
+  border: 2px solid #222;
+  border-top: none;
+  border-left: none;
+  border-radius: 0 0 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+/* FEATURE SECTION */
+.poke-feature-wrapper {
+  width: min(1260px, calc(100% - 120px));
+  margin: 0 auto;
+  padding-left: 70px;
+}
+
+.poke-heading-area {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #222;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 6px 6px 0 0;
+  margin-bottom: 0;
+  margin-left: 80px;
+}
+
+.poke-heading-area .poke-heading-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 3px solid #7f7f7f;
+  position: relative;
+}
+
+.poke-heading-area .poke-heading-dot::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  background: #7f7f7f;
+}
+
+.poke-heading-area h2 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* SLIDER ROW */
+.poke-slider-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  margin-top: 0;
+  border: 2px solid #2f2f2f;
+  border-left: none;
+  border-right: none;
+}
+
+.poke-item-card {
+  background: #565656;
+  min-height: 380px;
+  border-right: 2px solid #2f2f2f;
+  position: relative;
+  overflow: hidden;
+  transition: 0.25s ease;
+}
+
+.poke-item-card:last-child {
+  border-right: none;
+}
+
+.poke-item-card:hover {
+  transform: translateY(-4px);
+}
+
+.poke-image-box {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+}
+
+.poke-image-box img {
+  max-width: 100%;
+  max-height: 240px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.3));
+}
+
+.poke-content-box {
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  padding: 16px 18px;
+  min-height: 80px;
+}
+
+.poke-content-box h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.poke-active-card .poke-content-box {
+  background: #222;
+}
+
+.poke-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.poke-card-header h3 {
+  font-size: 22px;
+}
+
+.poke-number {
+  font-size: 18px;
+  font-weight: 600;
+  color: #dcdcdc;
+}
+
+.poke-info-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.poke-info-title {
+  width: 80px;
+  font-size: 14px;
+  color: #d6d6d6;
+}
+
+.poke-type-list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.poke-type-list span {
+  background: #d9be44;
+  color: #222;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.poke-ability-text {
+  font-size: 14px;
+  color: #f0f0f0;
+}
+
+/* ARROWS */
+.poke-arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 88px;
+  border: none;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  font-size: 44px;
+  cursor: pointer;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.poke-left-arrow {
+  left: 85px;
+  border-radius: 0 12px 12px 0;
+}
+
+.poke-right-arrow {
+  right: 0;
+  border-radius: 12px 0 0 12px;
+}
+
+/* BOTTOM BUTTON */
+.poke-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.poke-explore-btn {
+  background: #1f1f1f;
+  color: #fff;
+  border: none;
+  padding: 14px 26px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.poke-explore-btn:hover {
+  background: #000;
+}
+
+/* RESPONSIVE — poke-showcase */
+@media (max-width: 1200px) {
+  .poke-slider-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .poke-item-card:nth-child(4),
+  .poke-item-card:nth-child(5) {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .poke-feature-wrapper {
+    width: calc(100% - 20px);
+    padding-left: 0;
+  }
+
+  .poke-heading-area {
+    margin-left: 70px;
+  }
+
+  .poke-slider-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .poke-item-card:nth-child(2),
+  .poke-item-card:nth-child(4),
+  .poke-item-card:nth-child(5) {
+    display: none;
+  }
+
+  .poke-left-arrow {
+    left: 10px;
+  }
+
+  .poke-right-arrow {
+    right: 0;
+  }
+
+  .poke-sidebar {
+    top: 90px;
+  }
+}
+
+/* ── our-div section (three article cards) ── */
+.two-article img {
+  width: 270px;
+  height: 180px;
+  border-radius: 6px 6px 0 0;
+  display: block;
+}
+
+.one-div {
+  background-color: rgb(238 107 47);
+  width: 270px;
+  border-radius: 0 0 6px 6px;
+  padding: 15px;
+}
+
+.two-init h3 {
+  font-size: clamp(18px, 1.6vw, 24px);
+  line-height: 1.35;
+  color: #fff;
+  font-weight: 600;
+}
+
+.two-init p {
+  color: #fff;
+  line-height: 1.35;
+}
+
+.three-div {
+  background-color: rgb(227 53 13);
+  width: 270px;
+  border-radius: 0 0 6px 6px;
+  padding: 15px;
+}
+
+.four-div {
+  background-color: rgb(164 164 164);
+  width: 270px;
+  border-radius: 0 0 6px 6px;
+  padding: 15px;
+}
+
+.four-div h3 {
+  color: #000;
+}
+
+.four-div p {
+  color: #616161;
+}
+
+.our-div {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  padding-top: 80px;
+}
+
+.two-article {
+  display: flex;
+  flex-direction: column;
+}
+
+.middle-card {
+  margin-top: -40px;
+}
+
+/* FIX: two-article img and content divs had fixed 270px width — on mobile they overflow.
+   Make them fluid so cards don't overflow their container. */
+@media (max-width: 992px) {
+  .our-div {
+    flex-wrap: wrap;
+    padding-top: 40px;
+  }
+
+  .two-article img,
+  .one-div,
+  .three-div,
+  .four-div {
+    width: 240px;
+  }
+
+  /* reset middle-card offset on tablet so stacked cards align */
+  .middle-card {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .our-div {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding-top: 24px;
+  }
+
+  .two-article img,
+  .one-div,
+  .three-div,
+  .four-div {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .two-article {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* ── center-text ── */
+.center-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -60px;
+}
+
+.center-text h2 {
+  font-size: 175.5%;
+  line-height: 125%;
+  text-transform: none;
+  color: #919191;
+  cursor: default;
+}
+
+/* FIX: center-text had margin-top:-60px which overlapped on mobile after our-div reflows */
+@media (max-width: 700px) {
+  .center-text {
+    margin-top: 20px;
+  }
+}
+
+/* ── news-card-wrapper section ── */
+.news-feature-card img {
+  width: 270px;
+  height: 180px;
+  border-radius: 6px 6px 0 0;
+  display: block;
+}
+
+.news-green-box {
+  background-color: rgb(230 188 47);
+  width: 270px;
+  border-radius: 0 0 6px 6px;
+  padding: 15px;
+}
+
+.news-card-content h3 {
+  font-size: clamp(18px, 1.6vw, 24px);
+  line-height: 1.35;
+  color: #fff;
+  font-weight: 600;
+}
+
+.news-card-content p {
+  color: #fff;
+  line-height: 1.35;
+}
+
+.news-orange-box {
+  background-color: rgb(48 167 215);
+  width: 270px;
+  border-radius: 0 0 6px 6px;
+  padding: 15px;
+}
+
+.news-gray-box {
+  background-color: rgb(255 144 196);
+  width: 270px;
+  border-radius: 0 0 6px 6px;
+  padding: 15px;
+}
+
+.news-gray-box h3 {
+  color: #fff;
+}
+
+.news-gray-box p {
+  color: #fff;
+}
+
+.news-card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding-top: 50px;
+}
+
+.news-feature-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-center-card {
+  margin-top: -30px;
+}
+
+.news-first-card {
+  margin-top: -50px;
+}
+
+/* FIX: news cards also have fixed 270px widths — make them fluid on smaller screens */
+@media (max-width: 992px) {
+  .news-card-wrapper {
+    flex-wrap: wrap;
+    padding-top: 30px;
+  }
+
+  .news-feature-card img,
+  .news-green-box,
+  .news-orange-box,
+  .news-gray-box {
+    width: 240px;
+  }
+
+  /* reset stagger offsets when cards wrap so they don't overlap */
+  .news-center-card,
+  .news-first-card {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .news-card-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding-top: 20px;
+  }
+
+  .news-feature-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .news-feature-card img,
+  .news-green-box,
+  .news-orange-box,
+  .news-gray-box {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .news-feature-card img {
+    height: auto;
+  }
+}
+
+/* ── news-card (View All News) ── */
+.news-card {
+  width: 280px;
+  font-family: Arial, sans-serif;
+  margin-left: 810px;      /* desktop: floats to the right */
+}
+
+.card-top {
+  background: #f06d2f;
+  padding: 18px 20px;
+  border-radius: 6px 6px 0 0;
+}
+
+.card-top h2 {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.card-bottom {
+  background: #35a6d8;
+  padding: 15px 20px;
+  position: relative;
+  border-radius: 0 0 0 6px;
+}
+
+.card-bottom::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 24px solid transparent;
+  border-bottom: 24px solid white;
+}
+
+.card-bottom p {
+  color: #0b2233;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* FIX: news-card uses margin-left:810px which causes massive overflow on tablet/mobile.
+   Switch to centered alignment for smaller screens. */
+@media (max-width: 1200px) {
+  .news-card {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+}
+
+/* ── Footer ── */
+.footer {
+  background-color: rgb(31, 31, 31);
+  padding: 60px 10%;
+  font-family: sans-serif;
+}
+
+.footer-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.p-tags {
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 135%;
+  color: white;
+  line-height: 125%;
+}
+
+.signup-form input[type="email"] {
+  width: 400px;
+  height: 40px;
+  padding: 0 15px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.select {
+  width: 200px;
+  height: 40px;
+  padding: 0 15px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+}
+
+.signup-form input[type="text"] {
+  width: 190px;
+  height: 40px;
+  padding: 0 15px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+}
+
+.signup-form button {
+  width: 115px;
+  height: 50px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #fa3333;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.side-div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 450px;
+}
+
+.side-div h5 {
+  margin: 0 0 5px 0;
+  color: white;
+  font-size: 22px;
+}
+
+.side-div label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: white;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.footer-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 1px solid #444;
+  padding-top: 40px;
+  gap: 30px;
+}
+
+.div-heading h2 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.div-heading p {
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.div-heading p:hover {
+  color: white;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 220px;
+  background-color: #444;
+  align-self: center;
+}
+
+.pokemon-two {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.div-with {
+  display: flex;
+  gap: 15px;
+}
+
+.div-with img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.last-div {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  max-width: 350px;
+}
+
+.last-div img {
+  width: 70px;
+  height: auto;
+}
+
+.last-div ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.last-div ul li {
+  margin-bottom: 10px;
+}
+
+.last-div ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
+.last-div ul li a:hover {
+  text-decoration: underline;
+}
+
+.last-div ul li.copyright {
+  color: #aaa;
+  font-size: 11px;
+  line-height: 1.6;
+  margin-top: 15px;
+}
+
+/* FIX: footer-top-row stacks form and checkboxes side by side which breaks below ~900px.
+   Also signup email input is fixed 400px wide — shrink it. */
+@media (max-width: 992px) {
+  .footer {
+    padding: 40px 5%;
+  }
+
+  .footer-top-row {
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  .signup-form input[type="email"] {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .form-row {
+    flex-wrap: wrap;
+  }
+
+  .select {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .signup-form input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .side-div {
+    max-width: 100%;
+  }
+}
+
+/* FIX: footer-bottom-row has 4 columns (links | divider | socials | divider | logo+links).
+   On tablet collapse the vertical dividers and wrap columns. */
+@media (max-width: 992px) {
+  .footer-bottom-row {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  /* Hide vertical dividers on tablet/mobile — they don't make sense in a wrapped layout */
+  .vertical-line {
+    display: none;
+  }
+
+  .pokemon-two {
+    flex-grow: 0;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .last-div {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px 4%;
+  }
+
+  .div-with {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .last-div {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
